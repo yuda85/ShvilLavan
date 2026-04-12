@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /.claude/
 
-Sitemap: https://shvillavan.co.il/sitemap.xml
+Sitemap: https://shvillavan.netlify.app/sitemap.xml
