@@ -32,7 +32,7 @@
     <link rel="apple-touch-icon" href="images/logo.png">
 
     <!-- Preload & Performance -->
-    <link rel="preload" as="image" href="images/hero.png">
+    <link rel="preload" as="image" href="images/hero.webp" type="image/webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
@@ -50,7 +50,7 @@
         "name": "שביל לבן",
         "description": "ליווי מסעות בשטח לאורך שבילי ישראל - הובלת ציוד, הקמת מחנות, אוכל ומים למטיילים בשביל ישראל, שביל הגולן וים אל ים",
         "url": "https://shvillavan.netlify.app",
-        "logo": "https://shvillavan.netlify.app/images/jeep-1.png",
+        "logo": "https://shvillavan.netlify.app/images/logo.png",
         "image": "https://shvillavan.netlify.app/images/jeep-1.png",
         "telephone": "+972542471641",
         "email": "info@shvillavan.co.il",
@@ -120,7 +120,10 @@
     <!-- Hero Section 1 - Hikers -->
     <section class="hero" id="hero">
         <div class="hero-bg">
-            <img src="images/hero.png" alt="מטיילים בשביל ישראל משקיפים על נוף אגם - ליווי מסעות בשטח שביל לבן" class="hero-bg-img">
+            <picture>
+                <source srcset="images/hero.webp" type="image/webp">
+                <img src="images/hero.jpg" alt="מטיילים בשביל ישראל משקיפים על נוף אגם - ליווי מסעות בשטח שביל לבן" class="hero-bg-img">
+            </picture>
             <div class="hero-overlay"></div>
         </div>
         <div class="hero-content">
@@ -175,7 +178,10 @@
     <!-- Hero Section 2 - Campsite Sunset -->
     <section class="hero-secondary">
         <div class="hero-secondary-bg">
-            <img src="images/hero2.png" alt="מחנה שטח מצויד בשקיעה - הקמת מחנות לאורך שביל ישראל" class="hero-secondary-bg-img">
+            <picture>
+                <source srcset="images/hero2.webp" type="image/webp">
+                <img src="images/hero2.jpg" alt="מחנה שטח מצויד בשקיעה - הקמת מחנות לאורך שביל ישראל" class="hero-secondary-bg-img">
+            </picture>
         </div>
     </section>
 
@@ -184,7 +190,10 @@
         <h2 class="sr-only">השירותים שלנו בתמונות</h2>
         <div class="gallery-grid-full">
             <div class="gallery-item-overlay">
-                <img src="images/jeep-1.png" alt="רכב שטח להובלת ציוד למטיילים בשביל ישראל ושביל הגולן" loading="lazy">
+                <picture>
+                    <source srcset="images/jeep-1.webp" type="image/webp">
+                    <img src="images/jeep-1.jpg" alt="רכב שטח להובלת ציוד למטיילים בשביל ישראל ושביל הגולן" loading="lazy">
+                </picture>
                 <div class="gallery-overlay"></div>
                 <div class="gallery-text">
                     <h3>הובלת ציוד בשטח</h3>
@@ -192,7 +201,10 @@
                 </div>
             </div>
             <div class="gallery-item-overlay">
-                <img src="images/tent-2.png" alt="הקמת מחנות ולינה בשטח - אוהלים וציוד מוכנים למטיילים" loading="lazy">
+                <picture>
+                    <source srcset="images/tent-2.webp" type="image/webp">
+                    <img src="images/tent-2.jpg" alt="הקמת מחנות ולינה בשטח - אוהלים וציוד מוכנים למטיילים" loading="lazy">
+                </picture>
                 <div class="gallery-overlay"></div>
                 <div class="gallery-text">
                     <h3>הקמת מחנות ולינה</h3>
@@ -200,7 +212,10 @@
                 </div>
             </div>
             <div class="gallery-item-overlay">
-                <img src="images/food-3.png" alt="בישול אוכל טרי בשטח - ארוחות שטח לאורך המסלול" loading="lazy">
+                <picture>
+                    <source srcset="images/food-3.webp" type="image/webp">
+                    <img src="images/food-3.jpg" alt="בישול אוכל טרי בשטח - ארוחות שטח לאורך המסלול" loading="lazy">
+                </picture>
                 <div class="gallery-overlay"></div>
                 <div class="gallery-text">
                     <h3>אוכל טרי ומזין בשטח</h3>
@@ -208,7 +223,10 @@
                 </div>
             </div>
             <div class="gallery-item-overlay">
-                <img src="images/equipment-4.png" alt="ציוד שטח מקצועי - לוגיסטיקה שטח למטיילים" loading="lazy">
+                <picture>
+                    <source srcset="images/equipment-4.webp" type="image/webp">
+                    <img src="images/equipment-4.jpg" alt="ציוד שטח מקצועי - לוגיסטיקה שטח למטיילים" loading="lazy">
+                </picture>
                 <div class="gallery-overlay"></div>
                 <div class="gallery-text">
                     <h3>ציוד שטח מקצועי</h3>
@@ -258,7 +276,10 @@
     <!-- Why Choose Us - Icon Bar -->
     <section class="why-us" id="why-us">
         <div class="why-us-bg">
-            <img src="images/texture-green.png" alt="" class="why-us-bg-img">
+            <picture>
+                <source srcset="images/texture-green.webp" type="image/webp">
+                <img src="images/texture-green.jpg" alt="" class="why-us-bg-img">
+            </picture>
         </div>
         <div class="container">
             <h2 class="why-us-title">למה לבחור בנו</h2>
