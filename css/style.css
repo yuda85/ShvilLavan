@@ -189,9 +189,10 @@ ul {
 }
 
 .header-logo-img {
-    height: 72px;
+    height: 90px;
     width: auto;
-    margin: -12px 0;
+    margin: -16px 0;
+    transition: height 0.2s ease, margin 0.2s ease;
 }
 
 .header.scrolled .header-logo-img {
@@ -318,11 +319,6 @@ ul {
     max-width: 800px;
 }
 
-.hero-logo {
-    width: 220px;
-    margin: 0 auto 32px;
-    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4));
-}
 
 .hero-title {
     font-size: 2.8rem;
@@ -369,7 +365,7 @@ ul {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 24px;
 }
 
@@ -1017,6 +1013,25 @@ ul {
    ========================================================================== */
 
 /* Page Hero (shorter than homepage) */
+/* ==========================================================================
+   FAMILY HOSTING
+   ========================================================================== */
+.family-hosting {
+    padding: var(--section-padding);
+    background: var(--color-white);
+}
+
+.family-hosting .content-with-image {
+    margin-bottom: 0;
+}
+
+.family-hosting .content-with-image p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--color-text);
+    margin-bottom: 16px;
+}
+
 /* Force dark header on inner pages (no full-screen hero behind it) */
 body:has(.page-hero) .header {
     background: rgba(44, 24, 16, 0.95);
@@ -1374,10 +1389,6 @@ body:has(.page-hero) .header {
         padding: 100px 20px 60px;
     }
 
-    .hero-logo {
-        width: 160px;
-        margin-bottom: 24px;
-    }
 
     .hero-title {
         font-size: 1.8rem;
