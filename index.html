@@ -42,8 +42,10 @@
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
 
     <!-- Stylesheets -->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap&subset=hebrew" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap&subset=hebrew" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap&subset=hebrew"></noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"></noscript>
     <link rel="stylesheet" href="css/style.css">
 
     <!-- Google tag (gtag.js) -->
@@ -108,7 +110,7 @@
     <header class="header" id="header">
         <div class="container">
             <a href="/" class="header-logo">
-                <img src="images/logo.png" alt="שביל לבן" class="header-logo-img">
+                <picture><source srcset="images/logo.webp" type="image/webp"><img src="images/logo.png" alt="שביל לבן" class="header-logo-img" width="412" height="247"></picture>
             </a>
             <nav class="nav" id="nav">
                 <a href="services/" class="nav-link">השירותים שלנו</a>
@@ -143,7 +145,7 @@
         <div class="hero-bg">
             <picture>
                 <source srcset="images/hero.webp" type="image/webp">
-                <img src="images/hero.jpg" alt="מטיילים בשביל ישראל משקיפים על נוף אגם - ליווי מסעות בשטח שביל לבן" class="hero-bg-img">
+                <img src="images/hero.jpg" alt="מטיילים בשביל ישראל משקיפים על נוף אגם - ליווי מסעות בשטח שביל לבן" class="hero-bg-img" width="1920" height="792">
             </picture>
             <div class="hero-overlay"></div>
         </div>
@@ -207,7 +209,7 @@
         <div class="hero-secondary-bg">
             <picture>
                 <source srcset="images/hero2.webp" type="image/webp">
-                <img src="images/hero2.jpg" alt="מחנה שטח מצויד בשקיעה - הקמת מחנות לאורך שביל ישראל" class="hero-secondary-bg-img">
+                <img src="images/hero2.jpg" alt="מחנה שטח מצויד בשקיעה - הקמת מחנות לאורך שביל ישראל" class="hero-secondary-bg-img" width="1920" height="505">
             </picture>
         </div>
     </section>
@@ -219,7 +221,7 @@
             <div class="gallery-item-overlay">
                 <picture>
                     <source srcset="images/jeep-1.webp" type="image/webp">
-                    <img src="images/jeep-1.jpg" alt="רכב שטח להובלת ציוד למטיילים בשביל ישראל ושביל הגולן" loading="lazy">
+                    <img src="images/jeep-1.jpg" alt="רכב שטח להובלת ציוד למטיילים בשביל ישראל ושביל הגולן" loading="lazy" width="1920" height="739">
                 </picture>
                 <div class="gallery-overlay"></div>
                 <div class="gallery-text">
@@ -230,7 +232,7 @@
             <div class="gallery-item-overlay">
                 <picture>
                     <source srcset="images/tent-2.webp" type="image/webp">
-                    <img src="images/tent-2.jpg" alt="הקמת מחנות ולינה בשטח - אוהלים וציוד מוכנים למטיילים" loading="lazy">
+                    <img src="images/tent-2.jpg" alt="הקמת מחנות ולינה בשטח - אוהלים וציוד מוכנים למטיילים" loading="lazy" width="1920" height="773">
                 </picture>
                 <div class="gallery-overlay"></div>
                 <div class="gallery-text">
@@ -241,7 +243,7 @@
             <div class="gallery-item-overlay">
                 <picture>
                     <source srcset="images/food-3.webp" type="image/webp">
-                    <img src="images/food-3.jpg" alt="בישול אוכל טרי בשטח - ארוחות שטח לאורך המסלול" loading="lazy">
+                    <img src="images/food-3.jpg" alt="בישול אוכל טרי בשטח - ארוחות שטח לאורך המסלול" loading="lazy" width="1920" height="773">
                 </picture>
                 <div class="gallery-overlay"></div>
                 <div class="gallery-text">
@@ -252,7 +254,7 @@
             <div class="gallery-item-overlay">
                 <picture>
                     <source srcset="images/equipment-4.webp" type="image/webp">
-                    <img src="images/equipment-4.jpg" alt="ציוד שטח מקצועי - לוגיסטיקה שטח למטיילים" loading="lazy">
+                    <img src="images/equipment-4.jpg" alt="ציוד שטח מקצועי - לוגיסטיקה שטח למטיילים" loading="lazy" width="1920" height="739">
                 </picture>
                 <div class="gallery-overlay"></div>
                 <div class="gallery-text">
@@ -313,7 +315,7 @@
                 <div class="content-image">
                     <picture>
                         <source srcset="images/family.webp" type="image/webp">
-                        <img src="images/family.jpg" alt="אירוח משפחות בטבע - משפחה יושבת ליד מדורה באוהל מאובזר" loading="lazy">
+                        <img src="images/family.jpg" alt="אירוח משפחות בטבע - משפחה יושבת ליד מדורה באוהל מאובזר" loading="lazy" width="1920" height="739">
                     </picture>
                 </div>
             </div>
@@ -373,7 +375,7 @@
         <div class="why-us-bg">
             <picture>
                 <source srcset="images/texture-green.webp" type="image/webp">
-                <img src="images/texture-green.jpg" alt="" class="why-us-bg-img">
+                <img src="images/texture-green.jpg" alt="" class="why-us-bg-img" width="463" height="79">
             </picture>
         </div>
         <div class="container">
@@ -496,7 +498,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <img src="images/logo.png" alt="שביל לבן" class="footer-logo">
+                <picture><source srcset="images/logo.webp" type="image/webp"><img src="images/logo.png" alt="שביל לבן" class="footer-logo" width="412" height="247"></picture>
                 <div class="footer-links">
                     <a href="index.html">דף הבית</a>
                     <a href="services/">השירותים שלנו</a>
