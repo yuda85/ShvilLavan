@@ -1,0 +1,32 @@
+    <!-- Header / Navigation -->
+    <header class="header" id="header">
+        <div class="container">
+            <a href="/" class="header-logo">
+                <picture><source srcset="/images/logo.webp" type="image/webp"><img src="/images/logo.png" alt="{{ site.name }}" class="header-logo-img" width="412" height="247"></picture>
+            </a>
+            <nav class="nav" id="nav">
+                <a href="/services/" class="nav-link">השירותים שלנו</a>
+                <a href="/family-hosting/" class="nav-link">אירוח משפחות</a>
+                <a href="/blog/" class="nav-link">בלוג</a>
+                <div class="nav-dropdown" id="navDropdown">
+                    <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">המסלולים</button>
+                    <div class="nav-dropdown-menu">
+                        <a href="/shvil-israel/">שביל ישראל</a>
+                        <a href="/shvil-golan/">שביל הגולן</a>
+                        <a href="/yam-el-yam/">ים אל ים</a>
+                    </div>
+                </div>
+                <a href="{{ whyUsHref or '/#why-us' }}" class="nav-link">למה אנחנו</a>
+                <a href="{{ contactHref or '/#contact' }}" class="nav-link">צרו קשר</a>
+                <a href="tel:{{ site.phone }}" class="nav-phone">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    {{ site.phoneDisplay }}
+                </a>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="תפריט" aria-expanded="false" aria-controls="nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>

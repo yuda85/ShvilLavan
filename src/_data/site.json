@@ -1,0 +1,27 @@
+{
+  "name": "שביל לבן",
+  "url": "https://shvil-lavan.co.il",
+  "phone": "+972542471641",
+  "phoneDisplay": "054-247-1641",
+  "email": "info@shvil-lavan.co.il",
+  "whatsapp": "https://wa.me/972542471641",
+  "gaId": "G-JRVN92WHZT",
+  "googleSiteVerification": "XO6TRL8xaPU1ixETOd6vrWLZlLOxW7yBqOmfjFtHZLA",
+  "defaultOgImage": "https://shvil-lavan.co.il/images/og-share.jpg",
+  "nav": [
+    { "href": "/services/", "label": "השירותים שלנו" },
+    { "href": "/family-hosting/", "label": "אירוח משפחות" },
+    { "href": "/blog/", "label": "בלוג" }
+  ],
+  "routes": [
+    { "href": "/shvil-israel/", "label": "שביל ישראל" },
+    { "href": "/shvil-golan/", "label": "שביל הגולן" },
+    { "href": "/yam-el-yam/", "label": "ים אל ים" }
+  ],
+  "localBusiness": {
+    "description": "ליווי מסעות בשטח לאורך שבילי ישראל - הובלת ציוד, הקמת מחנות, אוכל ומים למטיילים בשביל ישראל, שביל הגולן וים אל ים",
+    "logo": "https://shvil-lavan.co.il/images/logo.png",
+    "image": "https://shvil-lavan.co.il/images/jeep-1.png",
+    "serviceType": ["ליווי מסעות בשטח", "הובלת ציוד למטיילים", "הקמת מחנות", "לוגיסטיקה שטח"]
+  }
+}

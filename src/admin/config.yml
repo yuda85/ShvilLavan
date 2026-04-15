@@ -1,0 +1,151 @@
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: "src/images"
+public_folder: "/images"
+
+locale: "he"
+
+publish_mode: editorial_workflow
+
+site_url: https://shvil-lavan.co.il
+display_url: https://shvil-lavan.co.il
+logo_url: https://shvil-lavan.co.il/images/logo.png
+
+collections:
+  - name: "blog"
+    label: "פוסטים בבלוג"
+    label_singular: "פוסט"
+    folder: "src/blog/posts"
+    create: true
+    slug: "{{slug}}"
+    extension: "njk"
+    format: "frontmatter"
+    fields:
+      - { name: "layout", label: "Layout", widget: "hidden", default: "layouts/base.njk" }
+      - { name: "permalink", label: "Permalink", widget: "string", hint: "לדוגמה: /blog/my-post/index.html" }
+      - { name: "title", label: "כותרת", widget: "string" }
+      - { name: "description", label: "תיאור SEO (140-160 תווים)", widget: "text" }
+      - { name: "keywords", label: "מילות מפתח (מופרדות בפסיקים)", widget: "string", required: false }
+      - { name: "canonical", label: "Canonical URL", widget: "string", hint: "לדוגמה: https://shvil-lavan.co.il/blog/my-post/" }
+      - { name: "ogImage", label: "תמונת שיתוף (OG)", widget: "image", required: false }
+      - { name: "heroImage", label: "שם תמונת hero (ללא סיומת)", widget: "string", required: false, hint: "לדוגמה: hero2" }
+      - { name: "date", label: "תאריך פרסום", widget: "datetime" }
+      - { name: "dateModified", label: "תאריך עדכון אחרון", widget: "datetime", required: false }
+      - name: "structuredData"
+        label: "JSON-LD Schema (Article)"
+        widget: "list"
+        required: false
+        fields:
+          - { name: "@context", label: "Context", widget: "hidden", default: "https://schema.org" }
+          - { name: "@type", label: "Type", widget: "select", options: ["Article", "BreadcrumbList", "WebPage"], default: "Article" }
+          - { name: "headline", label: "Headline", widget: "string", required: false }
+          - { name: "description", label: "Description", widget: "text", required: false }
+          - { name: "image", label: "Image URL", widget: "string", required: false }
+          - { name: "datePublished", label: "Date Published", widget: "string", required: false }
+          - { name: "dateModified", label: "Date Modified", widget: "string", required: false }
+      - { name: "body", label: "תוכן הפוסט (HTML)", widget: "text", hint: "ה-HTML של גוף הפוסט. עוטף ב-<article class='blog-post'>..." }
+
+  - name: "pages"
+    label: "דפי האתר"
+    label_singular: "דף"
+    editor:
+      preview: false
+    files:
+      - name: "home"
+        label: "דף הבית"
+        file: "src/pages/index.njk"
+        fields:
+          - { name: "layout", label: "Layout", widget: "hidden", default: "layouts/base.njk" }
+          - { name: "permalink", label: "Permalink", widget: "hidden", default: "/index.html" }
+          - { name: "title", label: "Title", widget: "string" }
+          - { name: "description", label: "Meta description", widget: "text" }
+          - { name: "keywords", label: "Meta keywords", widget: "string", required: false }
+          - { name: "canonical", label: "Canonical URL", widget: "string" }
+          - { name: "ogImage", label: "OG image URL", widget: "string", required: false }
+          - { name: "heroImage", label: "Hero preload name", widget: "string", required: false }
+          - { name: "structuredData", label: "JSON-LD schemas", widget: "list", required: false, field: { name: "schema", label: "Schema (JSON)", widget: "text" } }
+          - { name: "body", label: "Body HTML", widget: "text" }
+
+      - name: "services"
+        label: "השירותים שלנו"
+        file: "src/pages/services.njk"
+        fields: &page_fields
+          - { name: "layout", label: "Layout", widget: "hidden", default: "layouts/base.njk" }
+          - { name: "permalink", label: "Permalink", widget: "hidden" }
+          - { name: "title", label: "Title", widget: "string" }
+          - { name: "description", label: "Meta description", widget: "text" }
+          - { name: "keywords", label: "Meta keywords", widget: "string", required: false }
+          - { name: "canonical", label: "Canonical URL", widget: "string" }
+          - { name: "ogImage", label: "OG image URL", widget: "string", required: false }
+          - { name: "heroImage", label: "Hero preload name", widget: "string", required: false }
+          - { name: "structuredData", label: "JSON-LD schemas", widget: "list", required: false, field: { name: "schema", label: "Schema (JSON)", widget: "text" } }
+          - { name: "body", label: "Body HTML", widget: "text" }
+
+      - name: "shvil-israel"
+        label: "שביל ישראל"
+        file: "src/pages/shvil-israel.njk"
+        fields: *page_fields
+
+      - name: "shvil-golan"
+        label: "שביל הגולן"
+        file: "src/pages/shvil-golan.njk"
+        fields: *page_fields
+
+      - name: "yam-el-yam"
+        label: "ים אל ים"
+        file: "src/pages/yam-el-yam.njk"
+        fields: *page_fields
+
+      - name: "family-hosting"
+        label: "אירוח משפחות"
+        file: "src/pages/family-hosting.njk"
+        fields: *page_fields
+
+      - name: "blog-index"
+        label: "דף בלוג (רשימה)"
+        file: "src/pages/blog.njk"
+        fields: *page_fields
+
+  - name: "settings"
+    label: "הגדרות כלליות"
+    editor:
+      preview: false
+    files:
+      - name: "site"
+        label: "פרטי אתר"
+        file: "src/_data/site.json"
+        fields:
+          - { name: "name", label: "שם האתר", widget: "string" }
+          - { name: "url", label: "כתובת URL", widget: "string" }
+          - { name: "phone", label: "טלפון (בינלאומי, למשל +972542471641)", widget: "string" }
+          - { name: "phoneDisplay", label: "טלפון (תצוגה)", widget: "string" }
+          - { name: "email", label: "אימייל", widget: "string" }
+          - { name: "whatsapp", label: "קישור וואטסאפ", widget: "string" }
+          - { name: "gaId", label: "Google Analytics ID", widget: "string" }
+          - { name: "googleSiteVerification", label: "Google Site Verification", widget: "string" }
+          - { name: "defaultOgImage", label: "תמונת OG ברירת מחדל", widget: "string" }
+          - name: "nav"
+            label: "תפריט ראשי"
+            widget: "list"
+            fields:
+              - { name: "href", label: "קישור", widget: "string" }
+              - { name: "label", label: "טקסט", widget: "string" }
+          - name: "routes"
+            label: "מסלולים (תפריט נפתח)"
+            widget: "list"
+            fields:
+              - { name: "href", label: "קישור", widget: "string" }
+              - { name: "label", label: "טקסט", widget: "string" }
+          - name: "localBusiness"
+            label: "נתוני LocalBusiness (JSON-LD)"
+            widget: "object"
+            fields:
+              - { name: "description", label: "תיאור", widget: "text" }
+              - { name: "logo", label: "URL לוגו", widget: "string" }
+              - { name: "image", label: "URL תמונה", widget: "string" }
+              - name: "serviceType"
+                label: "סוגי שירות"
+                widget: "list"
+                field: { name: "service", label: "שירות", widget: "string" }

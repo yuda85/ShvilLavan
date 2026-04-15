@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+{% include "partials/head-meta.njk" %}
+{% if structuredData %}
+{% for schema in structuredData %}
+    <script type="application/ld+json">{{ schema | dump | safe }}</script>
+{% endfor %}
+{% endif %}
+{% if extraHead %}{{ extraHead | safe }}{% endif %}
+</head>
+<body{% if bodyClass %} class="{{ bodyClass }}"{% endif %}>
+
+{% include "partials/header.njk" %}
+
+    <main>
+{{ content | safe }}
+    </main>
+
+{% include "partials/footer.njk" %}
+
+    <script src="/js/main.js"></script>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+</body>
+</html>
