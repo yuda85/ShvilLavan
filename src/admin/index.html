@@ -1,11 +1,21 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl">
+<html lang="he" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex">
   <title>שביל לבן - ניהול תוכן</title>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <style>
+    /* Decap CMS UI is built for LTR; force LTR layout but allow Hebrew text inside inputs */
+    html, body, #nc-root { direction: ltr !important; }
+    input, textarea, select { direction: rtl; text-align: right; }
+    [class*="SidebarHeading"], [class*="CollectionTitle"],
+    [class*="EntryListing"], [class*="CardHeading"], [class*="CardBody"] {
+      direction: rtl;
+      text-align: right;
+    }
+  </style>
 </head>
 <body>
   <script src="https://unpkg.com/decap-cms@^3.6.0/dist/decap-cms.js"></script>
