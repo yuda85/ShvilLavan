@@ -59,14 +59,120 @@ collections:
         fields:
           - { name: "layout", label: "Layout", widget: "hidden", default: "layouts/base.njk" }
           - { name: "permalink", label: "Permalink", widget: "hidden", default: "/index.html" }
-          - { name: "title", label: "Title", widget: "string" }
-          - { name: "description", label: "Meta description", widget: "text" }
-          - { name: "keywords", label: "Meta keywords", widget: "string", required: false }
+          - { name: "title", label: "כותרת הדף (SEO)", widget: "string" }
+          - { name: "description", label: "תיאור SEO (140-160 תווים)", widget: "text" }
+          - { name: "keywords", label: "מילות מפתח", widget: "string", required: false }
           - { name: "canonical", label: "Canonical URL", widget: "string" }
-          - { name: "ogImage", label: "OG image URL", widget: "string", required: false }
-          - { name: "heroImage", label: "Hero preload name", widget: "string", required: false }
+          - { name: "ogDescription", label: "תיאור OG", widget: "text", required: false }
+          - { name: "ogImage", label: "תמונת שיתוף OG (URL)", widget: "string", required: false }
+          - { name: "heroImage", label: "תמונת hero (שם ללא סיומת)", widget: "string", required: false }
           - { name: "structuredData", label: "JSON-LD schemas", widget: "list", required: false, field: { name: "schema", label: "Schema (JSON)", widget: "text" } }
-          - { name: "body", label: "Body HTML", widget: "text" }
+          - name: "hero"
+            label: "באנר ראשי (Hero)"
+            widget: "object"
+            fields:
+              - { name: "image", label: "תמונה (שם ללא סיומת)", widget: "string" }
+              - { name: "imageAlt", label: "תיאור תמונה (alt)", widget: "string" }
+              - { name: "h1", label: "כותרת ראשית (H1)", widget: "string" }
+              - { name: "subtitle", label: "תת כותרת", widget: "string" }
+              - { name: "description", label: "שורת מסלולים", widget: "string" }
+              - { name: "ctaPrimaryText", label: "טקסט כפתור ראשי", widget: "string" }
+              - { name: "ctaPrimaryHref", label: "קישור כפתור ראשי", widget: "string" }
+              - { name: "ctaSecondaryText", label: "טקסט כפתור משני", widget: "string" }
+              - { name: "ctaSecondaryHref", label: "קישור כפתור משני", widget: "string" }
+          - name: "services"
+            label: "רצועת שירותים"
+            widget: "object"
+            fields:
+              - { name: "title", label: "כותרת", widget: "string" }
+              - name: "items"
+                label: "שירותים"
+                widget: "list"
+                fields:
+                  - { name: "title", label: "שם השירות", widget: "string" }
+                  - { name: "text", label: "תיאור", widget: "string" }
+                  - { name: "icon", label: "אייקון", widget: "select", options: ["truck", "layers", "coffee", "navigation", "home"] }
+          - name: "heroSecondary"
+            label: "באנר משני"
+            widget: "object"
+            fields:
+              - { name: "image", label: "תמונה (שם ללא סיומת)", widget: "string" }
+              - { name: "imageAlt", label: "תיאור תמונה (alt)", widget: "string" }
+          - name: "gallery"
+            label: "גלריה"
+            widget: "object"
+            fields:
+              - name: "items"
+                label: "פריטים"
+                widget: "list"
+                fields:
+                  - { name: "image", label: "תמונה (שם ללא סיומת)", widget: "string" }
+                  - { name: "imageAlt", label: "תיאור תמונה (alt)", widget: "string" }
+                  - { name: "title", label: "כותרת", widget: "string" }
+                  - { name: "text", label: "תיאור", widget: "string" }
+                  - { name: "width", label: "רוחב", widget: "number", default: 1920 }
+                  - { name: "height", label: "גובה", widget: "number", default: 739 }
+          - name: "routes"
+            label: "מסלולים"
+            widget: "object"
+            fields:
+              - { name: "title", label: "כותרת", widget: "string" }
+              - { name: "subtitle", label: "תת כותרת", widget: "string" }
+              - name: "items"
+                label: "מסלולים"
+                widget: "list"
+                fields:
+                  - { name: "name", label: "שם המסלול", widget: "string" }
+                  - { name: "info", label: "מידע (מרחק וכו')", widget: "string" }
+                  - { name: "desc", label: "תיאור", widget: "text" }
+                  - { name: "ctaText", label: "טקסט כפתור", widget: "string" }
+                  - { name: "ctaHref", label: "קישור כפתור", widget: "string" }
+          - name: "familyHosting"
+            label: "אירוח משפחות"
+            widget: "object"
+            fields:
+              - { name: "title", label: "כותרת", widget: "string" }
+              - { name: "subtitle", label: "תת כותרת", widget: "string" }
+              - { name: "paragraph1", label: "פסקה ראשונה", widget: "text" }
+              - { name: "paragraph2", label: "פסקה שנייה", widget: "text" }
+              - { name: "image", label: "תמונה (שם ללא סיומת)", widget: "string" }
+              - { name: "imageAlt", label: "תיאור תמונה (alt)", widget: "string" }
+              - name: "features"
+                label: "תכונות"
+                widget: "list"
+                fields:
+                  - { name: "icon", label: "אייקון Font Awesome", widget: "string", hint: "לדוגמה: fa-campground" }
+                  - { name: "title", label: "כותרת", widget: "string" }
+                  - { name: "text", label: "תיאור", widget: "string" }
+              - { name: "ctaPrimaryText", label: "טקסט כפתור ראשי", widget: "string" }
+              - { name: "ctaPrimaryHref", label: "קישור כפתור ראשי", widget: "string" }
+              - { name: "ctaWhatsappText", label: "טקסט כפתור וואטסאפ", widget: "string" }
+              - { name: "ctaWhatsappHref", label: "קישור וואטסאפ", widget: "string" }
+          - name: "whyUs"
+            label: "למה לבחור בנו"
+            widget: "object"
+            fields:
+              - { name: "title", label: "כותרת", widget: "string" }
+              - name: "items"
+                label: "סיבות"
+                widget: "list"
+                fields:
+                  - { name: "icon", label: "אייקון Font Awesome", widget: "string", hint: "לדוגמה: fa-shield-heart" }
+                  - { name: "title", label: "כותרת", widget: "string" }
+                  - { name: "text", label: "תיאור", widget: "string" }
+          - name: "contact"
+            label: "צרו קשר"
+            widget: "object"
+            fields:
+              - { name: "title", label: "כותרת", widget: "string" }
+              - { name: "subtitle", label: "תת כותרת", widget: "string" }
+              - { name: "successTitle", label: "כותרת הצלחה", widget: "string" }
+              - { name: "successText", label: "טקסט הצלחה", widget: "string" }
+              - name: "routeOptions"
+                label: "אפשרויות מסלול (טופס)"
+                widget: "list"
+                field: { name: "option", label: "מסלול", widget: "string" }
+          - { name: "body", label: "תבנית (לא לערוך)", widget: "hidden" }
 
       - name: "services"
         label: "השירותים שלנו"
