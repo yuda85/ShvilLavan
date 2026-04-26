@@ -2,8 +2,9 @@
 <html lang="he" dir="rtl">
 <head>
 {% include "partials/head-meta.njk" %}
-{% if structuredData %}
-{% for schema in structuredData %}
+{%- set pageSchemas = structuredData or schemas[schemaKey] -%}
+{% if pageSchemas %}
+{% for schema in pageSchemas %}
     <script type="application/ld+json">{{ schema | dump | safe }}</script>
 {% endfor %}
 {% endif %}

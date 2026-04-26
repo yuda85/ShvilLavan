@@ -1,0 +1,36 @@
+{
+  "home": [
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "שביל לבן",
+      "description": "ליווי מסעות בשטח לאורך שבילי ישראל - הובלת ציוד, הקמת מחנות, אוכל ומים למטיילים בשביל ישראל, שביל הגולן וים אל ים",
+      "url": "https://shvil-lavan.co.il",
+      "logo": "https://shvil-lavan.co.il/images/logo.png",
+      "image": "https://shvil-lavan.co.il/images/jeep-1.png",
+      "telephone": "+972542471641",
+      "email": "info@shvil-lavan.co.il",
+      "areaServed": { "@type": "Country", "name": "Israel" },
+      "serviceType": ["ליווי מסעות בשטח", "הובלת ציוד למטיילים", "הקמת מחנות", "לוגיסטיקה שטח"],
+      "sameAs": []
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "ליווי מסעות בשטח",
+      "provider": { "@type": "LocalBusiness", "name": "שביל לבן" },
+      "areaServed": { "@type": "Country", "name": "Israel" },
+      "description": "שירותי ליווי מסעות בשטח הכוללים הובלת ציוד, הקמת מחנות לינה, אספקת אוכל ומים וליווי מלא לאורך שביל ישראל, שביל הגולן ומסלול ים אל ים",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "שירותי ליווי מסעות",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "הובלת ציוד בשטח" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "הקמת מחנות ולינה" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "אוכל ושתייה בשטח" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "ליווי מלא במסלול" } }
+        ]
+      }
+    }
+  ]
+}

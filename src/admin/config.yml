@@ -50,6 +50,8 @@ collections:
   - name: "pages"
     label: "דפי האתר"
     label_singular: "דף"
+    format: "frontmatter"
+    extension: "njk"
     editor:
       preview: false
     files:
@@ -66,7 +68,7 @@ collections:
           - { name: "ogDescription", label: "תיאור OG", widget: "text", required: false }
           - { name: "ogImage", label: "תמונת שיתוף OG (URL)", widget: "string", required: false }
           - { name: "heroImage", label: "תמונת hero (שם ללא סיומת)", widget: "string", required: false }
-          - { name: "structuredData", label: "JSON-LD schemas", widget: "list", required: false, field: { name: "schema", label: "Schema (JSON)", widget: "text" } }
+          - { name: "schemaKey", label: "מפתח Schema (JSON-LD)", widget: "hidden", default: "home" }
           - name: "hero"
             label: "באנר ראשי (Hero)"
             widget: "object"
